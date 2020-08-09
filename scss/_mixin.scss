@@ -1,0 +1,15 @@
+@mixin hide-text(){
+    text-indent: 101%;  /*縮排語法，設定 101% 讓 a 連結的文字超出圖片範圍*/
+    overflow: hidden;  /*再用 overflow 隱藏多出來的文字*/
+    white-space: nowrap;  /*讓文字不換行 */
+}
+@mixin pad{
+    @media(max-width: 768px){
+      @content;
+    }
+  }
+ @mixin mobile{
+    @media(max-width: 375px){
+      @content;
+    }
+}

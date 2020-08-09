@@ -1,0 +1,287 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+  }
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif; 
+    font-weight: 500;
+    font-size: $font-s;
+    line-height: 1.5;
+    color: $primary-color;
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+a{
+    text-decoration: none;
+    display: block;
+}
+
+.container{
+    max-width: 940px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    @include pad(){
+        max-width: 768px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    @include mobile(){
+        max-width: 375px;
+    }
+}
+
+.main{
+    margin-bottom: 60px;
+    @include pad(){
+        margin-bottom: 0px;
+    }
+}
+.inner{
+    max-width: 800px;
+    margin: 0 auto;
+    @include pad(){
+        max-width: 628px;
+    }
+}
+.form{
+    background: $primary-color;
+    padding: 30px 0;
+    @include pad(){
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+.footer{
+    background: $light-color;
+    padding: 30px 0;
+    @include pad(){
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 30px 0;
+    @include pad(){
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    &-toggler{
+        display: none;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        &:focus{
+            outline: 0;
+        }
+        @include pad(){
+            display: block;
+        }
+    }
+    &-logo{
+        width: 220px;   /*自訂文字寬度*/
+        height: 40px;   /*自訂文字高度*/
+        background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        @include hide-text();
+        @include pad(){
+            width: 115px;   /*自訂文字寬度*/
+            height: 17px;  /*自訂文字高度 */
+            background-image: url('https://hexschool.github.io/webLayoutTraining1st/student-week1/logotype-lg-dark.svg');
+        }
+    }
+    &-collapse{
+        display: flex;
+        align-items: center;
+        & a:hover{
+            border-bottom: 2px solid $primary-color;
+            @include pad(){
+                border-bottom: none;
+            }
+        }
+    }
+    &-menu{
+        display: flex;
+        align-items: center;
+        max-height: 0;
+        @include pad(){
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            transition: all 0.8s;
+            overflow: hidden;
+            background: #fff;
+            flex-direction: column;
+        }
+        .nav-item{
+            @include pad(){
+                width: 100%;
+                &:hover{
+                    background-color: $light-color;
+                }
+            }
+        }
+        .nav-link{
+            color: $primary-color;
+            margin-right: 60px;
+            @include pad(){
+                margin-right: 0;
+                padding: 10px 0;
+                text-align: center;
+            }
+        }
+    }
+    .active {
+        max-height: 200px;
+    }
+    &-cart{
+        font-weight: bold;
+        color: $primary-color;
+        display: block;
+        margin-left: 20px;
+    }
+}
+
+
+
+.mailWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    @include pad(){
+        justify-content:center;
+    }
+}
+.mail-text{
+    display: flex;
+    align-items: center;
+    @include pad(){
+        justify-content: center;
+        margin-bottom: 33px;
+        width: 80%;
+    }
+    img{
+        width: 40px;
+        margin-right: 20px;
+    }
+    p{
+        color: $light-color;
+        font-size: $font-l;
+        font-weight: 300;
+        @include mobile(){
+            font-size: $font-m;
+        }
+    }
+} 
+
+.mail-form{
+    display: flex;
+    justify-content: space-between;
+    background: $light-color;
+    @include pad(){
+        width: 80%;
+    }
+}
+.mail-icon{
+  padding: 16px 20px;
+} 
+
+.inputText{
+    border: none;
+    background: $light-color;
+    font-size: $font-s;
+    color: $primary-color;
+    width: 100%;
+    @include mobile(){
+        font-size: 14px;
+    }
+
+}
+.submitBtn{
+    border: none;
+    text-align: center;
+    display: block;
+    padding: 10px 20px;
+    color: $primary-color;
+    background-color: $secondary-color;
+    border: 1px solid $secondary-color;
+    &:hover{
+        background-color: $primary-color;
+        color: $secondary-color;
+        cursor: pointer;
+    }
+}
+
+.contactWrap{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.contact-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    img{
+        width: 171px;
+        @include pad(){
+            margin-bottom: 40px;
+        }
+    }
+    ul li{
+        font-size: $font-s;
+        font-weight: 300;
+    }
+}
+
+.contact-slogan{
+    writing-mode: vertical-rl;
+    font-size: 23px;
+    line-height: 1.5;
+    letter-spacing: 6px;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 900;
+    @include pad(){
+        display: none;
+    }
+}
+.media{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include pad(){
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    ul{
+        display: flex;
+        @include pad(){
+            margin-bottom: 23px;
+        }
+        li{
+            margin-right: 8px;
+        }
+    }
+    img{
+        width: 32px;
+    }
+    p{
+        font-family: 'Noto Serif TC', serif;
+        font-size: $font-s;
+    }
+}
+
+

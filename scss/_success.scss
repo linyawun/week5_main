@@ -1,0 +1,53 @@
+.sucess-banner{
+    background-image: url("../images/success-banner.jfif");
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 940px;
+    padding: 120px 0px;
+    .success-wrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        .process-check{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            .border{
+                border-bottom: 1px solid $primary-color;
+                height: 0;
+                width: 66px;
+            }
+        }
+        img{
+            width: 189px;
+            margin-bottom: 50px;
+        }
+        .btn-pc{
+            @include pad(){
+                display: none;
+            }
+        }
+    }
+}
+.btn{
+    color: $primary-color;
+    background: $secondary-color;
+    border: 1px solid $secondary-color;
+    font-size: $font-l;
+    padding: 16px 102px;
+    font-family: 'Noto Sans TC', sans-serif;
+    &:hover{
+        background: $primary-color;
+        color: $secondary-color;
+        cursor: pointer;
+    }
+}
+.btn-mobile{
+    display: none;
+    @include pad(){
+        display: block;
+        width: 100%;
+    }
+}

@@ -1,0 +1,163 @@
+.banner{
+    margin-bottom: 60px;
+    @include pad(){
+        margin-bottom: 0;
+    }
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.category{
+    width: 30%;
+    text-align: center;
+    font-size: $font-l;
+    @include pad(){
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    h3{
+        background: $primary-color;
+        color: $light-color;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    a{
+        color: $primary-color;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border: 1px solid $light-color;
+        &:hover{
+            background: $light-color; 
+        }
+    }
+    &-now{
+        background: $light-color;
+    }
+    ul{
+        @include pad(){
+            display: flex;
+            flex-wrap: wrap;
+        }
+        li{
+            @include pad(){
+                width: 50%;
+            }
+            @include mobile(){
+                width: 100%;
+            }
+        }
+
+    }
+}
+
+
+.product{
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include pad(){
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    li{
+        width: 46%;
+        position: relative;
+        margin-bottom: 20px;
+        @include mobile(){
+            width: 100%;
+        }
+    }
+    &-info{
+        display: flex;
+        text-align: center;
+        font-size: $font-m;
+        border: 1px solid $light-color;
+        h3{
+            width: 56%;
+            font-weight: 300;
+            padding: 14px 0;
+            border-right: 1px solid $light-color;
+        }
+        span{
+            width: 44%;
+            padding: 14px 0;
+        }
+    }
+}
+
+.cart{
+    background: $light-color;
+    border: 1px solid $light-color;
+    color: $primary-color;
+    font-size: $font-l;
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    &:hover{
+        background: $primary-color;
+        color: $light-color;
+    }
+}
+
+.favorite{
+    position: absolute;
+    top: 19px;
+    right: 22px;
+    span{
+        font-size: $font-m;
+        color:$primary-color;
+    }
+}
+
+.special{
+    background: $primary-color;
+    color: $light-color;
+    position: absolute;
+    left: 20px;
+    writing-mode: vertical-lr ;
+    font-size: $font-s;
+    letter-spacing: 6px;
+    padding: 10px;
+}
+
+.page{
+    display: flex;
+    justify-content: flex-end;
+    @include pad(){
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 30px;
+    }
+    @include mobile(){
+        justify-content: center; 
+    } 
+    a{
+        text-align: center;
+        border: 1px solid $light-color;
+        font-size: $font-m;
+        padding: 14.2px 23.3px;
+        color: $primary-color;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            background: $primary-color;
+            color: $light-color;
+            border: 1px solid $primary-color;
+        }
+    }
+    &-now a{
+        color: $light-color;
+        background: $primary-color;
+        border: 1px solid $primary-color;
+    }
+    .arrow a{
+        padding: 17px;
+    }
+}
