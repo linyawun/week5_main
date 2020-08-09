@@ -1,9 +1,17 @@
 .sucess-banner{
-    background-image: url("../images/success-banner.jfif");
-    background-position: center;
-    background-repeat: no-repeat;
     max-width: 940px;
-    padding: 120px 0px;
+    // height: 460px;
+    background-image: url("../images/success-banner.jfif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: 0 -80px;
+    background-size:cover;
+    padding-top: 128px;
+    padding-bottom: 116px;
+    @include pad(){
+        background-size:auto;
+        background-position: -80px -80px;
+    }
     .success-wrap{
         display: flex;
         flex-direction: column;
